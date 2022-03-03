@@ -1,0 +1,67 @@
+﻿@model SolicitudesDanielaHernandez.Models.Solicitud
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="~/css/style-sheet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Enviar Solicitud de Ingreso</h1>
+        <form asp-action="FormSolicitud">
+            
+            <div class="form-field">
+                <label asp-for="Nombre"></label>
+                <span class="input-span">
+                    <input asp-for="Nombre" />
+                    <span asp-validation-for="Nombre"></span>
+                </span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Apellido"></label>
+                <span class="input-span">
+                    <input asp-for="Apellido" />
+                    <span asp-validation-for="Apellido"></span>
+                </span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Identificacion"></label>
+                <span class="input-span">
+                    <input asp-for="Identificacion" />
+                    <span asp-validation-for="Identificacion"></span>
+                </span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Edad"></label>
+                <span class="input-span">
+                    <input asp-for="Edad" />
+                    <span asp-validation-for="Edad"></span>
+                </span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Casa"></label>
+
+                <select id="Casa" name="Casa" asp-for="Casa">
+                    <option selected="selected" id="Gryffindor" value="Gryffindor">Gryffindor</option>
+                    <option id="Hufflepuff" value="Hufflepuff">Hufflepuff</option>
+                    <option id="Ravenclaw" value="Ravenclaw">Ravenclaw</option>
+                    <option id="Slytherin" value="Slytherin">Slytherin</option>
+                </select>
+                <span asp-validation-for="Casa"></span>
+
+            </div>
+
+            <div class="form-field">
+                <input type="submit" value="Enviar" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
